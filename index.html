@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oakleaf Pop-Up | Premier DJ & Event Entertainment in Northeast Florida</title>
-  <meta name="description" content="Northeast Florida's favorite DJ and event entertainment company. Serving Oakleaf, Orange Park, Middleburg, and Jacksonville with poolside DJ parties, weddings, CDD festivals, and private celebrations." />
+  <title>Florida Pop-Up LLC | Events, Food Trucks & Vendor Marketplace in Northeast Florida</title>
+  <meta name="description" content="Florida Pop-Up LLC: DJ and event entertainment, food truck booking, farmers market vendors, and an online vendor marketplace for Northeast Florida communities, HOAs, and CDDs." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #8b5cf6;
-      --primary-hover: #7c3aed;
+      --primary: #0f766e;
+      --primary-hover: #0b5f59;
       --accent: #06b6d4;
-      --accent-glow: rgba(6, 182, 212, 0.35);
-      --bg: #090d16;
-      --card-bg: rgba(18, 24, 38, 0.75);
-      --card-border: rgba(255, 255, 255, 0.08);
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --gradient-brand: linear-gradient(135deg, #a855f7 0%, #3b82f6 50%, #06b6d4 100%);
-      --gradient-card: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+      --accent-glow: rgba(232, 116, 59, 0.35);
+      --bg: #faf7f2;
+      --card-bg: rgba(255, 255, 255, 0.75);
+      --card-border: rgba(28, 25, 23, 0.08);
+      --text-main: #1c1917;
+      --text-muted: #6b645c;
+      --gradient-brand: linear-gradient(135deg, #0f766e 0%, #14917f 60%, #e8743b 150%);
+      --gradient-card: linear-gradient(180deg, #ffffff 0%, #fdfaf5 100%);
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 24px;
@@ -38,10 +38,7 @@
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.6;
       overflow-x: hidden;
-      background-image: 
-        radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.18) 0%, transparent 40%),
-        radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.15) 0%, transparent 45%),
-        radial-gradient(circle at 50% 80%, rgba(59, 130, 246, 0.12) 0%, transparent 50%);
+      background-image: radial-gradient(circle at 10% 0%, rgba(232,116,59,0.10) 0%, transparent 40%), radial-gradient(circle at 90% 20%, rgba(15,118,110,0.09) 0%, transparent 45%);
       background-attachment: fixed;
     }
 
@@ -69,7 +66,7 @@
       top: 0;
       z-index: 100;
       backdrop-filter: blur(16px);
-      background: rgba(9, 13, 22, 0.85);
+      background: rgba(250, 247, 242, 0.85);
       border-bottom: 1px solid var(--card-border);
     }
 
@@ -98,7 +95,7 @@
       justify-content: center;
       border-radius: var(--radius-md);
       font-weight: 900;
-      box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+      box-shadow: 0 0 20px rgba(15, 118, 110, 0.4);
     }
 
     .nav-links {
@@ -126,7 +123,7 @@
       font-weight: 700;
       font-size: 0.9rem;
       transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
+      box-shadow: 0 4px 14px rgba(15, 118, 110, 0.35);
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -134,7 +131,7 @@
 
     .nav-btn:hover {
       transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+      box-shadow: 0 6px 20px rgba(15, 118, 110, 0.5);
     }
 
     /* Hero Section */
@@ -149,12 +146,12 @@
       align-items: center;
       gap: 8px;
       padding: 6px 16px;
-      background: rgba(139, 92, 246, 0.15);
-      border: 1px solid rgba(139, 92, 246, 0.3);
+      background: rgba(15, 118, 110, 0.15);
+      border: 1px solid rgba(15, 118, 110, 0.3);
       border-radius: 9999px;
       font-size: 0.85rem;
       font-weight: 700;
-      color: #c084fc;
+      color: #0f766e;
       margin-bottom: 24px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -189,7 +186,7 @@
     }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.06);
+      background: rgba(28, 25, 23, 0.06);
       border: 1px solid var(--card-border);
       color: var(--text-main);
       padding: 14px 28px;
@@ -200,8 +197,8 @@
     }
 
     .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(28, 25, 23, 0.1);
+      border-color: rgba(28, 25, 23, 0.2);
     }
 
     .btn-primary-lg {
@@ -211,7 +208,7 @@
       border-radius: 9999px;
       font-weight: 700;
       font-size: 1rem;
-      box-shadow: 0 8px 24px rgba(139, 92, 246, 0.45);
+      box-shadow: 0 8px 24px rgba(15, 118, 110, 0.45);
       transition: all 0.2s;
       display: inline-flex;
       align-items: center;
@@ -220,13 +217,13 @@
 
     .btn-primary-lg:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(139, 92, 246, 0.6);
+      box-shadow: 0 12px 30px rgba(15, 118, 110, 0.6);
     }
 
     /* Trust / Client Bar */
     .trust-bar {
       padding: 24px;
-      background: rgba(18, 24, 38, 0.6);
+      background: rgba(255, 255, 255, 0.6);
       border: 1px solid var(--card-border);
       border-radius: var(--radius-lg);
       backdrop-filter: blur(12px);
@@ -254,7 +251,7 @@
     .trust-item {
       font-weight: 700;
       font-size: 1.05rem;
-      color: #cbd5e1;
+      color: #44403c;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -307,21 +304,21 @@
 
     .service-card:hover {
       transform: translateY(-6px);
-      border-color: rgba(139, 92, 246, 0.4);
+      border-color: rgba(15, 118, 110, 0.4);
     }
 
     .service-icon {
       width: 54px;
       height: 54px;
       border-radius: var(--radius-md);
-      background: rgba(139, 92, 246, 0.15);
-      border: 1px solid rgba(139, 92, 246, 0.3);
+      background: rgba(15, 118, 110, 0.15);
+      border: 1px solid rgba(15, 118, 110, 0.3);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.6rem;
       margin-bottom: 20px;
-      color: #c084fc;
+      color: #0f766e;
     }
 
     .service-card h3 {
@@ -358,8 +355,8 @@
 
     .pricing-card.featured {
       border: 2px solid var(--primary);
-      background: linear-gradient(180deg, rgba(139, 92, 246, 0.12) 0%, rgba(18, 24, 38, 0.85) 100%);
-      box-shadow: 0 0 35px rgba(139, 92, 246, 0.25);
+      background: linear-gradient(180deg, rgba(15, 118, 110, 0.12) 0%, rgba(255, 255, 255, 0.85) 100%);
+      box-shadow: 0 0 35px rgba(15, 118, 110, 0.25);
     }
 
     .popular-tag {
@@ -375,7 +372,7 @@
       font-weight: 800;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+      box-shadow: 0 4px 12px rgba(15, 118, 110, 0.4);
     }
 
     .pricing-head h3 {
@@ -419,7 +416,7 @@
       align-items: flex-start;
       gap: 12px;
       font-size: 0.95rem;
-      color: #e2e8f0;
+      color: #292524;
     }
 
     .check-icon {
@@ -430,7 +427,7 @@
 
     /* Calculator & Booking Form */
     .booking-section {
-      background: rgba(18, 24, 38, 0.85);
+      background: rgba(255, 255, 255, 0.85);
       border: 1px solid var(--card-border);
       border-radius: var(--radius-lg);
       padding: 48px;
@@ -464,16 +461,16 @@
       font-weight: 600;
       font-size: 0.9rem;
       margin-bottom: 8px;
-      color: #e2e8f0;
+      color: #292524;
     }
 
     .form-control {
       width: 100%;
-      background: rgba(9, 13, 22, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(250, 247, 242, 0.8);
+      border: 1px solid rgba(28, 25, 23, 0.12);
       border-radius: var(--radius-sm);
       padding: 12px 16px;
-      color: white;
+      color: var(--text-main);
       font-size: 0.95rem;
       font-family: inherit;
       transition: border-color 0.2s, box-shadow 0.2s;
@@ -482,17 +479,17 @@
     .form-control:focus {
       outline: none;
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.25);
     }
 
     select.form-control option {
-      background: #090d16;
-      color: white;
+      background: #ffffff;
+      color: #1c1917;
     }
 
     .estimate-box {
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(6, 182, 212, 0.08) 100%);
-      border: 1px solid rgba(139, 92, 246, 0.3);
+      background: linear-gradient(135deg, rgba(15, 118, 110, 0.12) 0%, rgba(232, 116, 59, 0.08) 100%);
+      border: 1px solid rgba(15, 118, 110, 0.3);
       border-radius: var(--radius-md);
       padding: 24px;
       margin-top: 24px;
@@ -510,7 +507,7 @@
     .estimate-amount {
       font-size: 2.6rem;
       font-weight: 900;
-      color: #38bdf8;
+      color: #0f766e;
       font-family: 'Outfit', sans-serif;
       margin: 8px 0;
     }
@@ -557,7 +554,7 @@
     .faq-card h4 {
       font-size: 1.15rem;
       margin-bottom: 10px;
-      color: #f1f5f9;
+      color: #1c1917;
     }
 
     .faq-card p {
@@ -609,11 +606,91 @@
     }
 
     .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-top: 1px solid rgba(28, 25, 23, 0.05);
       padding-top: 24px;
       text-align: center;
       font-size: 0.85rem;
     }
+
+    /* Four doors */
+    .doors-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-bottom:40px; }
+    .door-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius-md); padding:20px 16px; display:flex; flex-direction:column; align-items:center; gap:4px; transition:transform .25s,border-color .25s; }
+    .door-card:hover { transform:translateY(-4px); border-color:rgba(15, 118, 110,.5); }
+    .door-card span { font-size:1.9rem; }
+    .door-card small { color:var(--text-muted); }
+
+    /* Vendors */
+    .tier-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; margin-bottom:24px; }
+    .tier-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius-lg); padding:32px 28px; }
+    .tier-card h3 { font-size:1.35rem; margin-bottom:6px; }
+    .tier-card .tier-sub { color:var(--text-muted); font-size:.92rem; margin-bottom:18px; }
+    .soon-pill { display:inline-block; font-size:.72rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:#0f766e; border:1px solid rgba(56,189,248,.4); border-radius:9999px; padding:3px 12px; margin-bottom:14px; }
+    .waitlist { background:rgba(255, 255, 255, .85); border:1px solid var(--card-border); border-radius:var(--radius-lg); padding:36px; margin:0 auto 100px; max-width:760px; }
+    .waitlist .row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    @media (max-width:640px){ .waitlist .row{grid-template-columns:1fr;} .waitlist{padding:24px 18px;} }
+
+    /* Marketplace mall */
+    .mall { background:linear-gradient(180deg,rgba(28, 25, 23, .04),rgba(28, 25, 23, .01)); border:1px solid var(--card-border); border-radius:var(--radius-lg); padding:36px 28px 28px; margin-bottom:100px; }
+    .mall-label { text-align:center; color:var(--text-muted); font-size:.85rem; text-transform:uppercase; letter-spacing:.08em; font-weight:700; margin-bottom:22px; }
+    .mall-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:18px; }
+    .shopfront { cursor:pointer; background:none; border:none; color:inherit; font-family:inherit; text-align:center; padding:0; }
+    .awning { height:34px; border-radius:10px 10px 0 0; background:repeating-linear-gradient(90deg,var(--c1) 0 22px,#fffdf8 22px 44px); box-shadow:0 6px 10px rgba(0,0,0,.35); }
+    .shop-body { background:rgba(250, 247, 242, .9); border:1px solid var(--card-border); border-top:none; border-radius:0 0 10px 10px; padding:18px 12px 16px; transition:border-color .25s, transform .25s; }
+    .shopfront:hover .shop-body { border-color:rgba(56,189,248,.6); transform:translateY(-3px); }
+    .shop-door { width:54px; height:70px; margin:0 auto 12px; border:2px solid #a8a29e; border-radius:6px 6px 0 0; background:linear-gradient(135deg,rgba(56,189,248,.18),rgba(15, 118, 110,.18)); }
+    .shop-body strong { display:block; font-family:'Outfit',sans-serif; }
+    .shop-body small { color:var(--text-muted); }
+
+    .modal-bg { position:fixed; inset:0; background:rgba(0,0,0,.7); backdrop-filter:blur(6px); z-index:200; display:none; align-items:center; justify-content:center; padding:20px; }
+    .modal-bg.open { display:flex; }
+    .shop-modal { width:100%; max-width:760px; max-height:90vh; overflow:auto; background:#ffffff; border:1px solid var(--card-border); border-radius:var(--radius-lg); position:relative; }
+    .doors-open { height:90px; display:flex; overflow:hidden; border-radius:var(--radius-lg) var(--radius-lg) 0 0; }
+    .doors-open i { flex:1; background:linear-gradient(135deg,#e7e5e4,#d6d3d1); border-right:2px solid #faf7f2; transition:transform .9s ease; }
+    .shop-modal.opened .doors-open i:first-child { transform:translateX(-100%); }
+    .shop-modal.opened .doors-open i:last-child { transform:translateX(100%); }
+    .shop-inner { padding:24px 28px 30px; }
+    .rack { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:16px; padding:18px; border-radius:var(--radius-md); background:repeating-linear-gradient(180deg,transparent 0 168px,rgba(148,163,184,.25) 168px 172px); }
+    .item { background:rgba(255, 255, 255, .9); border:1px solid var(--card-border); border-radius:var(--radius-md); padding:14px; text-align:left; cursor:pointer; color:inherit; font-family:inherit; }
+    .item:hover { border-color:rgba(56,189,248,.6); }
+    .item .pic { height:80px; border-radius:8px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-size:2rem; background:rgba(15, 118, 110,.15); }
+    .item b { display:block; font-size:.92rem; } .item span { color:#0f766e; font-weight:800; }
+    .item-detail { margin-top:18px; padding:18px; border:1px solid var(--card-border); border-radius:var(--radius-md); display:none; }
+    .item-detail.open { display:block; }
+    .close-x { position:absolute; top:10px; right:14px; z-index:3; background:rgba(0,0,0,.5); color:white; border:none; width:34px; height:34px; border-radius:50%; font-size:1.1rem; cursor:pointer; }
+  
+    .service-card, .pricing-card, .tier-card, .faq-card, .door-card, .trust-bar, .booking-section, .waitlist, .mall {
+      box-shadow: 0 1px 2px rgba(28,25,23,.04), 0 10px 30px rgba(28,25,23,.06);
+    }
+    .pricing-card.featured { box-shadow: 0 12px 40px rgba(15,118,110,.18); background: linear-gradient(180deg, #ecfdf9 0%, #ffffff 100%); }
+    .nav-btn, .btn-primary-lg { box-shadow: 0 8px 22px rgba(15,118,110,.28); }
+    .logo-container > div:last-child, .nav-btn { white-space: nowrap; }
+    @media (max-width: 1060px) { .nav-links { display: none; } }
+    @media (max-width: 480px) { .logo-container { font-size: 1.1rem; } .nav-btn { padding: 9px 14px; font-size: .8rem; } }
+    .notice { background:#fff7ed; border:1px solid #fed7aa; color:#7c2d12; border-radius:var(--radius-md); padding:12px 16px; font-size:.92rem; margin-bottom:22px; }
+    .notice.warn { background:#fef2f2; border-color:#fecaca; color:#7f1d1d; margin:-6px 0 18px; }
+    .check-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px 14px; }
+    .check-grid label, label.consent { display:flex; align-items:center; gap:8px; font-weight:500; font-size:.92rem; cursor:pointer; margin:0; }
+    label.consent { align-items:flex-start; }
+    .form-status { margin-top:12px; font-weight:600; font-size:.95rem; }
+    .form-status.ok { color:#0f766e; } .form-status.err { color:#b91c1c; }
+    @media (max-width:520px){ .check-grid{grid-template-columns:1fr;} }
+    .rentals-grid { margin-bottom:30px !important; }
+    .rental { padding:0 0 24px; overflow:hidden; }
+    .rental h3, .rental p { padding:0 24px; }
+    .rental-photo { width:100%; height:200px; object-fit:cover; display:block; margin-bottom:18px; background:#ece6da; }
+    .rental-photo.placeholder { display:flex; align-items:center; justify-content:center; font-size:4rem; }
+    .doc-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px 14px; }
+    .doc-l { font-size:.82rem !important; font-weight:600; margin-bottom:4px !important; }
+    @media (max-width:640px){ .doc-grid{grid-template-columns:1fr;} }
+    footer { background: #1c1917; color: #d6d3d1; }
+    footer .footer-links li, footer p { color: #d6d3d1; }
+    footer a[href^="tel"], footer a[href^="mailto"] { color: #5eead4 !important; }
+    .footer-bottom { border-top-color: rgba(255,255,255,.12); }
+    .instant-text-btn { color: #052e16; }
+    .modal-bg { background: rgba(28,25,23,.55); }
+    .shop-modal { box-shadow: 0 30px 80px rgba(28,25,23,.35); }
+    .shop-body { background: #fff; }
+    .tag-badge { color: #0b5f59; }
   </style>
 </head>
 <body>
@@ -624,35 +701,44 @@
       <div class="logo-container">
         <div class="logo-badge">🎉</div>
         <div>
-          <span style="color: white;">OAKLEAF</span><span style="color: #38bdf8;"> POP-UP</span>
+          <span style="color: var(--text-main);">FLORIDA</span><span style="color: #0f766e;"> POP-UP</span><span style="color: var(--text-muted); font-size: 0.7em; font-weight: 700;"> LLC</span>
         </div>
       </div>
       <nav class="nav-links">
         <a href="#services">Services</a>
-        <a href="#pricing">Packages</a>
-        <a href="#calculator">Instant Quote</a>
+        <a href="#rentals">Rentals</a>
+        <a href="#marketplace">Virtual Mall</a>
+        <a href="#vendors">Become a Vendor</a>
+        <a href="#communities">Communities</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a href="#calculator" class="nav-btn">Book Your Event</a>
+      <a href="#request" class="nav-btn">Request a Pop-Up</a>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <div class="tag-badge">✨ Northeast Florida's Premier Event & DJ Experience</div>
+      <div class="tag-badge">🍃 Florida Pop-Up LLC</div>
       <h1>
-        Turn Any Occasion Into An<br>
-        <span class="gradient-text">Unforgettable Celebration</span>
+        Florida Pop-Up,<br>
+        <span class="gradient-text">bringing life to your local Oakleaf Pop-Up events!</span>
       </h1>
       <p class="hero-sub">
-        High-energy DJ entertainment, interactive games, and crystal-clear wedding sound. Proudly serving Oakleaf, Orange Park, Middleburg, and Greater Jacksonville.
+        Food trucks, vendor markets, DJs, movie nights, foam parties, bounce houses and more, plus an online mall for independently owned local businesses. Serving Oakleaf, Orange Park, Middleburg, and Greater Jacksonville.
       </p>
       <div class="hero-actions">
-        <a href="#calculator" class="btn-primary-lg">
-          <span>⚡ Check Date & Get Instant Quote</span>
+        <a href="#request" class="btn-primary-lg">
+          <span>🎪 Let us set up a pop up in your neighborhood!</span>
         </a>
-        <a href="#pricing" class="btn-secondary">Explore Packages & Pricing</a>
+        <a href="#vendors" class="btn-secondary">Become a Vendor</a>
+      </div>
+
+      <div class="doors-row">
+        <a href="#request" class="door-card"><span>🎪</span><strong>Request a Pop-Up</strong><small>Events &amp; services</small></a>
+        <a href="#marketplace" class="door-card"><span>🛍️</span><strong>Vendor Virtual Mall</strong><small>Shop local, online</small></a>
+        <a href="#vendors" class="door-card"><span>🚚</span><strong>Become a Vendor</strong><small>Trucks, markets &amp; makers</small></a>
+        <a href="#communities" class="door-card"><span>🏘️</span><strong>HOAs &amp; Communities</strong><small>Request services online</small></a>
       </div>
 
       <!-- Trust Bar -->
@@ -671,187 +757,209 @@
   <!-- Services Section -->
   <section id="services" class="container" style="padding-bottom: 40px;">
     <div class="section-header">
-      <h2>Everything You Need For A Packed Event</h2>
-      <p>From lively community pool parties to once-in-a-lifetime weddings, we provide professional gear, great vibes, and flawless execution.</p>
+      <h2>What We Can Pop Up</h2>
+      <p>Pick one service or build a whole event. Every event is customized, so we quote after we hear your details.</p>
     </div>
-
     <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">🎧</div>
-        <h3>DJ with Interactive Games</h3>
-        <p>Our signature package! High-energy DJ music coupled with hosted trivia, dance-offs, and lawn games that get guests of all ages off their chairs.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">💍</div>
-        <h3>Wedding Audio & Entertainment</h3>
-        <p>Complete ceremony to reception audio. Flawless wireless lapel mics for vows, elegant cocktail hour ambiance, and packed dance floors with pro MC coordination.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🏊‍♂️</div>
-        <h3>CDD & Poolside Festivals</h3>
-        <p>Trusted by HOA and CDD boards across Northeast Florida. Weather-ready sound setup, family-friendly clean playlists, and non-stop poolside fun.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🔊</div>
-        <h3>Pro Sound & Production</h3>
-        <p>Crystal-clear acoustic engineering powered by top-tier audio systems. No feedback, no muffling—just crisp, rich sound tailored to your venue.</p>
-      </div>
+      <div class="service-card"><div class="service-icon">🚚</div><h3>Food Trucks</h3><p>Local food trucks booked for your community, HOA, school or private event.</p></div>
+      <div class="service-card"><div class="service-icon">🧺</div><h3>Vendor Market</h3><p>A curated market of local makers, crafters and farmers market sellers.</p></div>
+      <div class="service-card"><div class="service-icon">🎧</div><h3>DJ (Night or Day)</h3><p>Daytime pool parties to late-night dance floors, with clean, family-friendly options.</p></div>
+      <div class="service-card"><div class="service-icon">🎬</div><h3>Movie Nights</h3><p>Big screen and sound for movie nights under the stars.</p></div>
+      <div class="service-card"><div class="service-icon">🫧</div><h3>Foam Parties</h3><p>Foam, music and a whole lot of fun for kids and teens.</p></div>
+      <div class="service-card"><div class="service-icon">🏰</div><h3>Bounce Houses</h3><p>Bounce houses for birthdays, community days and school events.</p></div>
+      <div class="service-card"><div class="service-icon">💦</div><h3>Water Slides</h3><p>Water slides to keep Florida summer events cool.</p></div>
+      <div class="service-card"><div class="service-icon">📡</div><h3>Event Livestream Service</h3><p>Stream your event to family, members or residents who can't be there.</p></div>
+      <div class="service-card"><div class="service-icon">🎸</div><h3>Live Band or Musicians</h3><p>Live music matched to your crowd and venue.</p></div>
+      <div class="service-card"><div class="service-icon">🔊</div><h3>Event PA Services</h3><p>Clear sound for weddings, business events, ceremonies and more.</p></div>
     </div>
   </section>
 
-  <!-- Pricing Section -->
-  <section id="pricing" class="container">
+  <!-- Rentals -->
+  <section id="rentals" class="container" style="padding-bottom: 40px;">
     <div class="section-header">
-      <h2>Simple, Transparent Packages</h2>
-      <p>No hidden fees, no surprise invoices. Clear upfront pricing with zero guesswork.</p>
+      <h2>Inflatables, Foam &amp; Party Rentals</h2>
+      <p>Delivered, set up and picked up for you. Tell us what you'd like and we'll send a custom quote.</p>
     </div>
+    <div class="services-grid rentals-grid">
+      <div class="service-card rental"><div class="rental-photo placeholder">🏰</div><h3>Character-Themed Bounce Houses</h3><p>Classic bounce houses with a theme panel you can choose for your guest of honor. Great for birthdays and community days.</p></div>
+      <div class="service-card rental"><img class="rental-photo" src="images/ultimate-challenge.jpg" alt="Ultimate Challenge inflatable" loading="lazy"><h3>Ultimate Challenge Course</h3><p>Race a friend or beat the clock. Timed challenges that keep kids and teens competing.</p></div>
+      <div class="service-card rental"><img class="rental-photo" src="images/obstacle-slide.jpg" alt="Inflatable obstacle course with slide" loading="lazy"><h3>Obstacle Course</h3><p>A fast-paced inflatable obstacle course for bigger crowds and bigger energy.</p></div>
+      <div class="service-card rental"><img class="rental-photo" src="images/combo-bounce-slide.jpg" alt="Combo bounce house with slide" loading="lazy"><h3>Combo Bounce Houses (Wet or Dry)</h3><p>5-in-1 combo with a bounce area, climbing wall and double-lane slide into a pool landing. Run it dry, or add water to cool off.</p></div>
+      <div class="service-card rental"><img class="rental-photo" src="images/foam-party.jpg" alt="Foam party" loading="lazy"><h3>Foam Party Machine</h3><p>A professional foam machine that buries the dance floor (or the driveway) in foam. Add extra hours to keep the party going.</p></div>
+      <div class="service-card rental"><img class="rental-photo" src="images/cash-cube.jpg" alt="Cash cube game" loading="lazy"><h3>Cash Cube</h3><p>Step inside and grab as much cash as you can while it swirls around you. A crowd-pleaser for fundraisers and parties.</p></div>
+    </div>
+    <div class="notice" style="max-width:860px;margin:0 auto 90px;">💳 <strong>How rentals work:</strong> Rentals are paid in full before your event. We place a <strong>$75 cleaning hold</strong> on your card, and release it once the equipment is returned in good condition. Delivery, setup and pickup are included in your quote.</div>
+  </section>
 
-    <div class="pricing-grid">
-      <!-- Package 1: DJ With Games -->
-      <div class="pricing-card featured">
-        <div class="popular-tag">Most Popular</div>
-        <div class="pricing-head">
-          <h3>DJ With Interactive Games</h3>
-          <p>Perfect for community pool parties, birthdays, block parties & CDD celebrations.</p>
-          <div class="price-value">
-            $475 <span class="price-period">/ event</span>
+  <!-- Service request form (no prices; quote is sent after review) -->
+  <section id="request" class="container">
+    <div class="booking-section">
+      <div class="section-header" style="margin-bottom: 28px;">
+        <h2>Let us set up a pop up in your neighborhood!</h2>
+        <p>Tell us what you have in mind. We review the details and send you a custom quote, so no two events are cookie cutter.</p>
+      </div>
+      <div class="notice">⏰ <strong>Large events</strong> (festivals, multi-vendor markets, community-wide events) need <strong>60 days' notice</strong>. Smaller events are welcome sooner, based on availability.</div>
+      <form id="requestForm" onsubmit="submitForm(event,'Service request')">
+        <div class="booking-grid">
+          <div>
+            <div class="form-group"><label>Your name / organization *</label><input class="form-control" required /></div>
+            <div class="form-group"><label>Email *</label><input type="email" class="form-control" required /></div>
+            <div class="form-group"><label>Phone *</label><input type="tel" class="form-control" placeholder="(904) 555-0199" required /></div>
+            <div class="form-group"><label>Event date *</label><input type="date" id="eventDate" class="form-control" required onchange="checkNotice()" /></div>
+            <div class="form-group"><label>Event size *</label>
+              <select id="eventSize" class="form-control" onchange="checkNotice()">
+                <option value="Small gathering (family, birthday, private party)">Small gathering (family, birthday, private party)</option>
+                <option value="Community event (neighborhood or HOA)">Community event (neighborhood or HOA)</option>
+                <option value="large">Large event (festival, market, community-wide)</option>
+              </select></div>
+            <div id="noticeWarn" class="notice warn" style="display:none;"></div>
+            <div class="form-group"><label>Venue / location *</label><input class="form-control" placeholder="e.g. community pool, Orange Park" required /></div>
+            <div class="form-group"><label>Expected guests</label><input class="form-control" placeholder="e.g. about 150" /></div>
+          </div>
+          <div>
+            <div class="form-group" data-q="Services requested">
+              <label>Services you're interested in *</label>
+              <div class="check-grid">
+                <label><input type="checkbox" value="Food Trucks" /> Food Trucks</label>
+                <label><input type="checkbox" value="Vendor Market" /> Vendor Market</label>
+                <label><input type="checkbox" value="DJ (Night or Day)" /> DJ (Night or Day)</label>
+                <label><input type="checkbox" value="Movie Night" /> Movie Night (screen + sound)</label>
+                <label><input type="checkbox" value="Foam Party" /> Foam Party</label>
+                <label><input type="checkbox" value="Bounce Houses" /> Bounce Houses</label>
+                <label><input type="checkbox" value="Water Slides" /> Water Slides</label>
+                <label><input type="checkbox" value="Event Livestream" /> Event Livestream</label>
+                <label><input type="checkbox" value="Live Band or Musicians" /> Live Band or Musicians</label>
+                <label><input type="checkbox" value="Event PA Services" /> Event PA Services</label>
+              </div>
+            </div>
+            <div class="form-group"><label>Tell us about your event</label><textarea class="form-control" rows="5" placeholder="Hours, crowd, theme, special requests, anything we should know."></textarea></div>
+            <div class="form-group"><label class="consent"><input type="checkbox" required /> I'm okay with Florida Pop-Up LLC contacting me about this request. *</label></div>
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" />
+            <button type="submit" class="btn-primary-lg" style="width:100%;justify-content:center;border:none;cursor:pointer;">🎪 Send My Request</button>
+            <div class="form-status" role="status"></div>
+            <a href="sms:+19045631694?body=Hi%2C%20I%27d%20like%20a%20pop-up%20in%20my%20neighborhood!" class="instant-text-btn">💬 Prefer to text? (904) 563-1694</a>
           </div>
         </div>
-        <ul class="features-list">
-          <li><span class="check-icon">✓</span> <strong>Full Live DJ & Sound System</strong></li>
-          <li><span class="check-icon">✓</span> <strong>Hosted Interactive Games & Trivia</strong></li>
-          <li><span class="check-icon">✓</span> Wireless Microphones for Announcements</li>
-          <li><span class="check-icon">✓</span> 100% Family-Friendly, Curated Music</li>
-          <li><span class="check-icon">✓</span> Full Delivery, Setup & Tear Down Included</li>
-        </ul>
-        <a href="#calculator" class="btn-primary-lg" style="width: 100%; justify-content: center;" onclick="selectPackage('dj-games')">Reserve This Package</a>
-      </div>
-
-      <!-- Package 2: Wedding Sound & Entertainment -->
-      <div class="pricing-card">
-        <div class="pricing-head">
-          <h3>Wedding Audio & Entertainment</h3>
-          <p>Comprehensive ceremony, cocktail hour & reception entertainment.</p>
-          <div class="price-value">
-            $1,000 <span class="price-period">/ full day (3:30 - 10:00 PM)</span>
-          </div>
-        </div>
-        <ul class="features-list">
-          <li><span class="check-icon">✓</span> <strong>Ceremony Audio:</strong> Lapel mics & music</li>
-          <li><span class="check-icon">✓</span> <strong>Cocktail & Dinner:</strong> Relaxed curated sets</li>
-          <li><span class="check-icon">✓</span> <strong>Reception DJ & MC:</strong> Grand entrance & dance party</li>
-          <li><span class="check-icon">✓</span> Dance Floor Lighting & Atmosphere</li>
-          <li><span class="check-icon">✓</span> Detailed Itinerary & Timeline Management</li>
-        </ul>
-        <a href="#calculator" class="btn-secondary" style="width: 100%; text-align: center; display: block;" onclick="selectPackage('wedding')">Reserve Wedding Date</a>
-      </div>
-
-      <!-- Package 3: Custom / Corporate Pop-Up -->
-      <div class="pricing-card">
-        <div class="pricing-head">
-          <h3>Custom Pop-Up Experience</h3>
-          <p>Tailored audio, lighting, and entertainment for multi-day festivals or corporate events.</p>
-          <div class="price-value">
-            Custom <span class="price-period">/ quote</span>
-          </div>
-        </div>
-        <ul class="features-list">
-          <li><span class="check-icon">✓</span> Multi-Speaker & Distributed Venue Sound</li>
-          <li><span class="check-icon">✓</span> Custom Architectural & Uplighting</li>
-          <li><span class="check-icon">✓</span> Multi-Day or Extended Hour Coverage</li>
-          <li><span class="check-icon">✓</span> On-Site Sound Engineer & Coordinator</li>
-          <li><span class="check-icon">✓</span> Corporate Billing / Vendor Compliance</li>
-        </ul>
-        <a href="#calculator" class="btn-secondary" style="width: 100%; text-align: center; display: block;" onclick="selectPackage('custom')">Request Custom Quote</a>
-      </div>
+      </form>
     </div>
   </section>
 
-  <!-- Interactive Quote / Booking Calculator -->
-  <section id="calculator" class="container">
-    <div class="booking-section">
-      <div class="section-header" style="margin-bottom: 36px;">
-        <h2>Check Availability & Instant Quote</h2>
-        <p>Select your event details below to get an estimated cost and submit your date request instantly.</p>
+  <!-- Vendors -->
+  <section id="vendors" class="container">
+    <div class="section-header">
+      <h2>Become a Vendor</h2>
+      <p>Get on our vendor roster and we handle the booking and scheduling for community markets and events. Vendor accounts are opening soon.</p>
+    </div>
+    <div class="tier-grid">
+      <div class="tier-card">
+        <span class="soon-pill">Coming soon</span>
+        <h3>🚚 Food Truck Roster</h3>
+        <p class="tier-sub">Small fee to be on the platform.</p>
+        <ul class="features-list">
+          <li><span class="check-icon">✓</span> Be booked for community, HOA &amp; CDD events</li>
+          <li><span class="check-icon">✓</span> We schedule you across markets and events</li>
+          <li><span class="check-icon">✓</span> Your own vendor login to manage your profile and dates</li>
+        </ul>
       </div>
-
-      <div class="booking-grid">
-        <!-- Calculator Controls -->
-        <div>
-          <div class="form-group">
-            <label for="eventType">Select Event Type</label>
-            <select id="eventType" class="form-control" onchange="calculateQuote()">
-              <option value="475" data-name="Community DJ with Games">Community / CDD Pool Party ($475)</option>
-              <option value="1000" data-name="Wedding Audio & Entertainment">Wedding Ceremony & Reception ($1,000)</option>
-              <option value="475" data-name="Private Birthday / Milestone">Private Birthday or Anniversary ($475)</option>
-              <option value="600" data-name="Corporate / HOA Gathering">Corporate Banquet / HOA Event ($600)</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="eventDate">Target Event Date</label>
-            <input type="date" id="eventDate" class="form-control" required />
-          </div>
-
-          <div class="form-group">
-            <label for="eventLocation">Event Location / Venue (City or Facility)</label>
-            <input type="text" id="eventLocation" class="form-control" placeholder="e.g. Double Branch Pool, Orange Park" />
-          </div>
-
-          <div class="form-group">
-            <label>Add-on Options</label>
-            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 6px;">
-              <label style="display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: 0.95rem; cursor: pointer;">
-                <input type="checkbox" id="addonLighting" value="150" onchange="calculateQuote()" />
-                Premium Uplighting Package (+$150)
-              </label>
-              <label style="display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: 0.95rem; cursor: pointer;">
-                <input type="checkbox" id="addonExtraHour" value="100" onchange="calculateQuote()" />
-                Additional Hour of DJ Coverage (+$100)
-              </label>
-            </div>
-          </div>
-
-          <div class="estimate-box">
-            <div class="estimate-title">Estimated Package Investment</div>
-            <div class="estimate-amount" id="displayTotal">$475</div>
-            <div style="font-size: 0.85rem; color: var(--text-muted);">Includes sound equipment, DJ, and complete setup/breakdown.</div>
-          </div>
-        </div>
-
-        <!-- Contact & Submission Form -->
-        <div>
-          <form id="inquiryForm" onsubmit="handleInquirySubmit(event)">
-            <div class="form-group">
-              <label for="contactName">Your Name / Organization Contact *</label>
-              <input type="text" id="contactName" class="form-control" placeholder="e.g. Lisa Carter" required />
-            </div>
-
-            <div class="form-group">
-              <label for="contactEmail">Email Address *</label>
-              <input type="email" id="contactEmail" class="form-control" placeholder="e.g. contact@domain.com" required />
-            </div>
-
-            <div class="form-group">
-              <label for="contactPhone">Phone Number *</label>
-              <input type="tel" id="contactPhone" class="form-control" placeholder="(904) 555-0199" required />
-            </div>
-
-            <div class="form-group">
-              <label for="eventNotes">Event Details or Questions</label>
-              <textarea id="eventNotes" class="form-control" rows="3" placeholder="Tell us about the crowd, hours, special music requests, etc."></textarea>
-            </div>
-
-            <button type="submit" class="btn-primary-lg" style="width: 100%; justify-content: center; border: none; cursor: pointer;">
-              🚀 Send Booking Request to Jose
-            </button>
-          </form>
-
-          <a href="sms:+19045631694?body=Hi%20Jose%2C%20I%27d%20like%20to%20check%20availability%20for%20an%20Oakleaf%20Pop-Up%20event!" class="instant-text-btn">
-            💬 Or Text Jose Directly: (904) 563-1694
-          </a>
-        </div>
+      <div class="tier-card">
+        <span class="soon-pill">Coming soon</span>
+        <h3>🧺 Market Vendor Roster</h3>
+        <p class="tier-sub">Crafts, goods, and farmers market sellers.</p>
+        <ul class="features-list">
+          <li><span class="check-icon">✓</span> Be scheduled into vendor markets and pop-ups</li>
+          <li><span class="check-icon">✓</span> Separate small platform fee, no store required</li>
+          <li><span class="check-icon">✓</span> Upgrade to an online store any time</li>
+        </ul>
       </div>
+      <div class="tier-card">
+        <span class="soon-pill">Coming soon</span>
+        <h3>🏬 Online Store</h3>
+        <p class="tier-sub">Sell online without running a website.</p>
+        <ul class="features-list">
+          <li><span class="check-icon">✓</span> Your own storefront in our online mall</li>
+          <li><span class="check-icon">✓</span> We handle checkout and payments</li>
+          <li><span class="check-icon">✓</span> Fees apply only to the online store option</li>
+        </ul>
+      </div>
+    </div>
+    <div class="waitlist" id="waitlist">
+      <div class="section-header" style="margin-bottom:24px;"><h2 style="font-size:1.8rem;">Vendor Application</h2><p>Tell us what you sell. You can upload your insurance and licenses now or send them later. Vendor logins are opening soon.</p></div>
+      <form onsubmit="submitForm(event,'Vendor sign-up')">
+        <div class="row">
+          <div class="form-group"><label>Business name *</label><input class="form-control" id="wl-biz" required /></div>
+          <div class="form-group"><label>Type *</label>
+            <select class="form-control" id="wl-type"><option>Food truck</option><option>Farmers market / produce</option><option>Crafts &amp; handmade goods</option><option>Retail / other items</option><option>Other service</option></select></div>
+          <div class="form-group"><label>Email *</label><input type="email" class="form-control" id="wl-email" required /></div>
+          <div class="form-group"><label>Phone</label><input type="tel" class="form-control" id="wl-phone" /></div>
+        </div>
+        <div class="form-group"><label>Interested in</label>
+          <select class="form-control" id="wl-interest"><option>Being booked / scheduled for events &amp; markets</option><option>Having an online store</option><option>Both</option></select></div>
+                <div class="form-group" data-q="Documents (optional now, required before approval)">
+          <label>Upload your documents <span style="font-weight:500;color:var(--text-muted);">(optional now, required before approval)</span></label>
+          <div class="doc-grid">
+            <div><label class="doc-l">Certificate of insurance (general liability)</label><input type="file" class="form-control" data-doc="Certificate of insurance" accept=".pdf,.jpg,.jpeg,.png" /></div>
+            <div><label class="doc-l">Insurance expiration date</label><input type="date" class="form-control" data-doc-date="Insurance expiration date" /></div>
+            <div><label class="doc-l">Food license / DBPR (food vendors)</label><input type="file" class="form-control" data-doc="Food license" accept=".pdf,.jpg,.jpeg,.png" /></div>
+            <div><label class="doc-l">Food license expiration date</label><input type="date" class="form-control" data-doc-date="Food license expiration date" /></div>
+            <div><label class="doc-l">Other (business tax receipt, sales tax registration, ride/inflatable permit)</label><input type="file" class="form-control" data-doc="Other documents" accept=".pdf,.jpg,.jpeg,.png" /></div>
+          </div>
+          <p style="color:var(--text-muted);font-size:.8rem;margin-top:8px;">PDF, JPG or PNG, up to 4 MB total. Food vendors: food service forms are required. Rides and bounce houses must carry their own general liability.</p>
+        </div>
+        <div class="form-group"><label class="consent"><input type="checkbox" required /> Florida Pop-Up LLC may contact me about vendor opportunities. *</label></div><input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" /><button type="submit" class="btn-primary-lg" style="width:100%;justify-content:center;border:none;cursor:pointer;">Submit Vendor Application</button><div class="form-status" role="status"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Marketplace -->
+  <section id="marketplace" class="container">
+    <div class="section-header">
+      <h2>Vendor Virtual Mall</h2>
+      <p>Come shop online with some of your favorite independently owned vendor businesses. Open a storefront door and browse the shelves. This is a preview; the sample shops below are placeholders.</p>
+    </div>
+    <div class="mall">
+      <div class="mall-label">🏬 Sample storefronts: click one to step inside</div>
+      <div class="mall-row" id="mallRow"></div>
+    </div>
+  </section>
+
+  <div class="modal-bg" id="shopModalBg" onclick="if(event.target===this)closeShop()">
+    <div class="shop-modal" id="shopModal">
+      <button class="close-x" onclick="closeShop()" aria-label="Close">✕</button>
+      <div class="doors-open"><i></i><i></i></div>
+      <div class="shop-inner">
+        <h3 id="shopTitle" style="font-size:1.6rem;"></h3>
+        <p id="shopTag" style="color:var(--text-muted);margin-bottom:16px;"></p>
+        <div class="rack" id="shopRack"></div>
+        <div class="item-detail" id="itemDetail"></div>
+        <p style="color:var(--text-muted);font-size:.8rem;margin-top:16px;">Preview only. Sample shop, items and prices are placeholders; checkout is not live yet. Sellers ship their own orders.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Communities -->
+  <section id="communities" class="container">
+    <div class="section-header">
+      <h2>For HOAs, CDDs &amp; Apartment Communities</h2>
+      <p>One place to request entertainment, food trucks, and vendor markets for your residents. Community accounts are opening soon.</p>
+    </div>
+    <div class="tier-grid" style="margin-bottom:24px;">
+      <div class="tier-card"><h3>📝 Request Online</h3><p class="tier-sub">Your community gets its own login to submit service and event requests.</p></div>
+      <div class="tier-card"><h3>📅 We Schedule It</h3><p class="tier-sub">We route the request, book the right vendors, and confirm the date.</p></div>
+      <div class="tier-card"><h3>🧾 Simple Invoicing</h3><p class="tier-sub">One invoice from Florida Pop-Up LLC. We coordinate the vendors.</p></div>
+    </div>
+    <div class="waitlist">
+      <div class="section-header" style="margin-bottom:24px;"><h2 style="font-size:1.8rem;">Register Your Community</h2><p>Management companies, boards and property managers: tell us about your property.</p></div>
+      <form onsubmit="submitForm(event,'Community registration')">
+        <div class="row">
+          <div class="form-group"><label>Community / property name *</label><input class="form-control" id="cm-biz" required /></div>
+          <div class="form-group"><label>Type *</label>
+            <select class="form-control" id="cm-type"><option>HOA</option><option>CDD</option><option>Apartment community</option><option>Property management company</option><option>Other</option></select></div>
+          <div class="form-group"><label>Contact email *</label><input type="email" class="form-control" id="cm-email" required /></div>
+          <div class="form-group"><label>Phone</label><input type="tel" class="form-control" id="cm-phone" /></div>
+        </div>
+        <div class="form-group"><label>What would you like to request?</label><textarea class="form-control" rows="3" id="cm-notes" placeholder="Events, food trucks, markets, DJ, etc."></textarea></div>
+        <div class="form-group"><label class="consent"><input type="checkbox" required /> Florida Pop-Up LLC may contact me about services for our community. *</label></div><input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" /><button type="submit" class="btn-primary-lg" style="width:100%;justify-content:center;border:none;cursor:pointer;">Register Interest</button><div class="form-status" role="status"></div>
+      </form>
     </div>
   </section>
 
@@ -863,22 +971,53 @@
     </div>
 
     <div class="faq-grid">
-      <div class="faq-card">
-        <h4>What areas do you serve?</h4>
-        <p>We primarily serve Clay, Duval, and St. Johns counties including Oakleaf Plantation, Orange Park, Middleburg, Fleming Island, Jacksonville, and Palatka.</p>
-      </div>
-      <div class="faq-card">
-        <h4>Are your playlists family-friendly?</h4>
-        <p>Yes, 100%! All pool parties, CDD events, and community festivals feature clean radio edits suitable for all ages while keeping the energy soaring.</p>
-      </div>
-      <div class="faq-card">
-        <h4>What kind of interactive games do you run?</h4>
-        <p>We tailor games to the crowd: music trivia, crowd dance challenges, limbo, potato sack races, tug-of-war, water games, and raffle announcements!</p>
-      </div>
-      <div class="faq-card">
-        <h4>What are the power requirements?</h4>
-        <p>We just need a standard 120V outdoor or indoor outlet within 75-100 feet of the setup area. We supply all commercial-grade cords and surge protectors.</p>
-      </div>
+      <div class="faq-card"><h4>How much does it cost?</h4><p>Every event is different, so we don't post set prices. Send your request and we'll review the details and customizations, then send you a quote.</p></div>
+      <div class="faq-card"><h4>How far ahead should I request?</h4><p>Large events like festivals, multi-vendor markets and community-wide events need 60 days' notice. Smaller events can often be booked sooner, depending on availability.</p></div>
+      <div class="faq-card"><h4>What areas do you serve?</h4><p>Primarily Clay, Duval, and St. Johns counties including Oakleaf Plantation, Orange Park, Middleburg, Fleming Island, Jacksonville, and Palatka.</p></div>
+      <div class="faq-card"><h4>Are your events family-friendly?</h4><p>Yes. Community and HOA events use clean, family-friendly music and activities for all ages.</p></div>
+      <div class="faq-card"><h4>What are the power requirements?</h4><p>For DJ and sound services we need a standard 120V outlet within 75-100 feet of the setup area. We bring the cords and surge protection.</p></div>
+      <div class="faq-card"><h4>How does payment work for rentals?</h4><p>Rentals are paid in full before your event. We place a $75 cleaning hold on your card and release it after the equipment is returned in good condition.</p></div>
+      <div class="faq-card"><h4>Can I sell on the Virtual Mall?</h4><p>Vendor accounts are opening soon. Join the vendor waitlist above and we'll reach out when it's time to set up your storefront.</p></div>
+    </div>
+  </section>
+
+  <!-- Insurance -->
+  <section id="insurance" class="container">
+    <div class="tier-card" style="max-width:860px;margin:0 auto 90px;">
+      <span class="soon-pill">For vendors &amp; hosts</span>
+      <h3 style="font-size:1.6rem;">Need insurance for your booth, truck or event?</h3>
+      <p class="tier-sub" style="margin-bottom:16px;">Vendors and event hosts are often asked for a certificate of insurance. Your Insurance Pro LLC, a Florida-licensed insurance agency (license L137709), can help you shop options for general liability and other business coverage.</p>
+      <form onsubmit="submitForm(event,'Insurance quote request')">
+        <div class="row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div class="form-group"><label>Name *</label><input class="form-control" required /></div>
+          <div class="form-group"><label>Email *</label><input type="email" class="form-control" required /></div>
+          <div class="form-group"><label>Phone</label><input type="tel" class="form-control" /></div>
+          <div class="form-group"><label>I need coverage for</label>
+            <select class="form-control"><option>Food truck / mobile food</option><option>Market booth / retail vendor</option><option>Event or community gathering</option><option>My small business</option><option>Other</option></select></div>
+        </div>
+        <div class="form-group"><label class="consent"><input type="checkbox" required /> I'd like Your Insurance Pro LLC to contact me about insurance. *</label></div>
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" />
+        <button type="submit" class="btn-primary-lg" style="border:none;cursor:pointer;">Request an Insurance Quote</button>
+        <div class="form-status" role="status"></div>
+      </form>
+      <p style="color:var(--text-muted);font-size:.8rem;margin-top:14px;">Florida Pop-Up LLC and Your Insurance Pro LLC are separate companies with the same owner. Using this form is optional and is not required to vendor with us or book an event.</p>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter" class="container">
+    <div class="waitlist" style="margin-bottom:80px;">
+      <div class="section-header" style="margin-bottom:20px;"><h2 style="font-size:1.8rem;">The Pop-Up Newsletter</h2><p>New shops, product spotlights, best sellers and upcoming pop-ups in your neighborhood.</p></div>
+      <form onsubmit="submitForm(event,'Newsletter signup')">
+        <div class="row">
+          <div class="form-group"><label>First name</label><input class="form-control" /></div>
+          <div class="form-group"><label>Email *</label><input type="email" class="form-control" required /></div>
+        </div>
+        <div class="form-group"><label class="consent"><input type="checkbox" required /> Send me the Florida Pop-Up LLC newsletter. I can unsubscribe any time. *</label></div>
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" />
+        <button type="submit" class="btn-primary-lg" style="width:100%;justify-content:center;border:none;cursor:pointer;">Subscribe</button>
+        <div class="form-status" role="status"></div>
+      </form>
     </div>
   </section>
 
@@ -887,19 +1026,22 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <h4>🎉 OAKLEAF POP-UP</h4>
-          <p style="margin-bottom: 16px;">Operated by <strong>Florida Pop-Up LLC</strong>.<br>Northeast Florida's trusted partner for community celebrations, poolside DJ games, and weddings.</p>
-          <p>📍 4109 Heatherbrook Pl, Middleburg, FL 32068<br>
-             📞 <a href="tel:+19045631694" style="color: #38bdf8;">(904) 563-1694</a><br>
-             ✉️ <a href="mailto:Oakleafpopup@gmail.com" style="color: #38bdf8;">Oakleafpopup@gmail.com</a>
+          <h4>🎉 FLORIDA POP-UP LLC</h4>
+          <p style="margin-bottom: 16px;"><strong>Florida Pop-Up LLC</strong><br>Events, food trucks, and a local vendor marketplace for Northeast Florida communities.</p>
+          <p>📍 Serving Clay, Duval &amp; St. Johns Counties, FL<br>
+             📞 <a href="tel:+19045631694" style="color: #5eead4;">(904) 563-1694</a><br>
+             ✉️ <a href="mailto:Oakleafpopup@gmail.com" style="color: #5eead4;">Oakleafpopup@gmail.com</a>
           </p>
         </div>
         <div class="footer-links">
           <h5>Quick Links</h5>
           <ul>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#pricing">Packages & Pricing</a></li>
-            <li><a href="#calculator">Instant Quote</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#request">Request a Pop-Up</a></li>
+            <li><a href="#marketplace">Virtual Mall</a></li>
+            <li><a href="#vendors">Become a Vendor</a></li>
+            <li><a href="#communities">Communities</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
@@ -914,57 +1056,101 @@
         </div>
       </div>
       <div class="footer-bottom">
-        &copy; 2026 Florida Pop-Up LLC / Oakleaf Pop-Up. All Rights Reserved.
+        &copy; 2026 Florida Pop-Up LLC. All Rights Reserved.
       </div>
     </div>
   </footer>
 
   <script>
-    function calculateQuote() {
-      const base = parseFloat(document.getElementById('eventType').value) || 0;
-      const lighting = document.getElementById('addonLighting').checked ? 150 : 0;
-      const extraHour = document.getElementById('addonExtraHour').checked ? 100 : 0;
-      const total = base + lighting + extraHour;
-      document.getElementById('displayTotal').innerText = '$' + total.toLocaleString();
+    // ----- Online forms: submitted in-page (no mail app, no redirect) -----
+    // Temporary: delivers to the Gmail inbox below via FormSubmit. Swap FORM_EMAIL for the company email once the domain is set up.
+    const FORM_EMAIL = 'Oakleafpopup@gmail.com';
+    const FORM_ENDPOINT = 'https://formsubmit.co/ajax/' + FORM_EMAIL;
+
+    function collectFields(form) {
+      const data = {};
+      form.querySelectorAll('.form-group').forEach(g => {
+        const label = g.dataset.q || (g.querySelector('label') || {}).innerText;
+        if (!label || g.querySelector('.consent')) return;
+        const boxes = g.querySelectorAll('input[type=checkbox]');
+        if (boxes.length) { data[label.replace(/\s*\*$/, '')] = [...boxes].filter(b => b.checked).map(b => b.value).join(', '); return; }
+        const el = g.querySelector('input:not([type=file]):not([data-doc-date]), select, textarea');
+        const dates = [...g.querySelectorAll('[data-doc-date]')].filter(d => d.value);
+        dates.forEach(d => { data[d.dataset.docDate] = d.value; });
+        if (g.querySelector('input[type=file]')) return;
+        if (el && el.value) data[label.replace(/\s*\*$/, '')] = el.tagName === 'SELECT' ? el.options[el.selectedIndex].text : el.value;
+      });
+      return data;
     }
 
-    function selectPackage(pkg) {
-      const select = document.getElementById('eventType');
-      if (pkg === 'dj-games') select.value = '475';
-      if (pkg === 'wedding') select.value = '1000';
-      if (pkg === 'custom') select.value = '600';
-      calculateQuote();
-    }
-
-    function handleInquirySubmit(e) {
+    async function submitForm(e, kind) {
       e.preventDefault();
-      const eventTypeSelect = document.getElementById('eventType');
-      const eventName = eventTypeSelect.options[eventTypeSelect.selectedIndex].getAttribute('data-name');
-      const date = document.getElementById('eventDate').value || 'To be determined';
-      const loc = document.getElementById('eventLocation').value || 'Not specified';
-      const total = document.getElementById('displayTotal').innerText;
-      const name = document.getElementById('contactName').value;
-      const email = document.getElementById('contactEmail').value;
-      const phone = document.getElementById('contactPhone').value;
-      const notes = document.getElementById('eventNotes').value;
-
-      const subject = encodeURIComponent(`New Event Booking Request: ${name} (${date})`);
-      const body = encodeURIComponent(
-        `Hi Jose,\n\nI would like to request a booking for Oakleaf Pop-Up!\n\n` +
-        `• Name / Org: ${name}\n` +
-        `• Phone: ${phone}\n` +
-        `• Email: ${email}\n` +
-        `• Event Type: ${eventName}\n` +
-        `• Estimated Quote: ${total}\n` +
-        `• Target Date: ${date}\n` +
-        `• Location: ${loc}\n` +
-        `• Notes / Questions: ${notes}\n\n` +
-        `Looking forward to hearing from you!`
-      );
-
-      // Open user mail client directed to Oakleafpopup@gmail.com
-      window.location.href = `mailto:Oakleafpopup@gmail.com?subject=${subject}&body=${body}`;
+      const form = e.target, status = form.querySelector('.form-status'), btn = form.querySelector('button[type=submit]');
+      const show = (msg, cls) => { if (status) { status.textContent = msg; status.className = 'form-status ' + cls; } };
+      if (form.id === 'requestForm' && !form.querySelector('.check-grid input:checked')) { show('Please choose at least one service.', 'err'); return; }
+      const honey = form.querySelector('[name=_honey]');
+      if (honey && honey.value) return;
+      const payload = Object.assign({ _subject: kind + ' - Florida Pop-Up LLC', _template: 'table', _captcha: 'false' }, collectFields(form));
+      const files = [...form.querySelectorAll('input[type=file]')].filter(f => f.files.length).map(f => ({ name: f.dataset.doc || 'Attachment', file: f.files[0] }));
+      if (files.reduce((n, f) => n + f.file.size, 0) > 4 * 1024 * 1024) { show('Your files are over 4 MB total. Please send smaller files or email them to ' + FORM_EMAIL + '.', 'err'); return; }
+      btn.disabled = true; show('Sending…', '');
+      try {
+        let init;
+        if (files.length) {
+          const fd = new FormData();
+          Object.entries(payload).forEach(([k, v]) => fd.append(k, v));
+          files.forEach(f => fd.append(f.name, f.file));
+          init = { method: 'POST', headers: { 'Accept': 'application/json' }, body: fd };
+        } else init = { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload) };
+        const r = await fetch(FORM_ENDPOINT, init);
+        const j = await r.json();
+        if (!r.ok || String(j.success) === 'false') throw new Error('send failed');
+        form.reset(); show(kind === 'Newsletter signup' ? "You're on the list. Thank you!" : "Thanks! We got your information and will be in touch soon.", 'ok');
+        if (typeof checkNotice === 'function') checkNotice();
+      } catch (err) {
+        show("Sorry, that didn't go through. Please text or call (904) 563-1694.", 'err');
+      } finally { btn.disabled = false; }
     }
+
+    // ----- 60-day notice for large events -----
+    function checkNotice() {
+      const d = document.getElementById('eventDate').value, size = document.getElementById('eventSize').value, w = document.getElementById('noticeWarn');
+      if (!d || size !== 'large') { w.style.display = 'none'; return; }
+      const days = Math.ceil((new Date(d + 'T00:00:00') - new Date()) / 86400000);
+      if (days < 60) { w.textContent = 'Large events need 60 days\' notice and this date is about ' + Math.max(days, 0) + ' days away. You can still send the request and we\'ll let you know what\'s possible.'; w.style.display = 'block'; }
+      else w.style.display = 'none';
+    }
+    document.addEventListener('DOMContentLoaded', () => { const el = document.getElementById('eventDate'); if (el) el.min = new Date().toISOString().slice(0, 10); });
+
+    // ----- Pop-Up Mall preview (sample data only) -----
+    const SHOPS = [
+      { name: 'Sample Candle Co.', tag: 'Hand-poured soy candles', c: '#f97316', items: [['🕯️','Lavender Jar','$14',['Small','Large'],'Hand-poured soy wax in a reusable jar.'],['🕯️','Citrus Tin','$9',['One size'],'Travel tin, bright citrus scent.'],['🎁','Gift Set','$32',['Set of 3'],'Three mini candles in a gift box.']] },
+      { name: 'Sample Jewelry', tag: 'Handmade accessories', c: '#a855f7', items: [['📿','Beaded Bracelet','$18',['Blue','Coral','Green'],'Stretch bracelet, assorted colors.'],['💍','Silver Ring','$26',['6','7','8','9'],'Hand-finished sterling-plated ring.'],['✨','Earrings','$15',['Gold','Silver'],'Lightweight drop earrings.']] },
+      { name: 'Sample Bakery', tag: 'Local baked goods', c: '#ec4899', items: [['🍪','Cookie Box','$16',['6-pack','12-pack'],'Fresh-baked assorted cookies.'],['🧁','Cupcakes','$22',['Half dozen','Dozen'],'Local pickup / delivery only.']] },
+      { name: 'Sample Tees &amp; Prints', tag: 'Local apparel &amp; art', c: '#06b6d4', items: [['👕','Graphic Tee','$24',['S','M','L','XL'],'Soft cotton tee, local design.'],['🖼️','Art Print','$20',['8x10','11x14'],'Signed print of a Florida scene.']] },
+      { name: 'Sample Plants', tag: 'Plants &amp; garden', c: '#22c55e', items: [['🌿','Herb Starter','$7',['Basil','Mint','Rosemary'],'Potted herb, ready to plant.'],['🌵','Succulent','$11',['Small','Medium'],'Low-maintenance desk plant.']] }
+    ];
+    document.getElementById('mallRow').innerHTML = SHOPS.map((sh, i) =>
+      `<button class="shopfront" style="--c1:${sh.c}" onclick="openShop(${i})"><div class="awning"></div><div class="shop-body"><div class="shop-door"></div><strong>${sh.name}</strong><small>${sh.tag}</small></div></button>`).join('');
+    function openShop(i) {
+      const sh = SHOPS[i], m = document.getElementById('shopModal');
+      document.getElementById('shopTitle').innerHTML = sh.name;
+      document.getElementById('shopTag').innerHTML = sh.tag;
+      document.getElementById('itemDetail').className = 'item-detail';
+      document.getElementById('shopRack').innerHTML = sh.items.map((it, j) =>
+        `<button class="item" onclick="showItem(${i},${j})"><div class="pic">${it[0]}</div><b>${it[1]}</b><span>${it[2]}</span></button>`).join('');
+      m.classList.remove('opened');
+      document.getElementById('shopModalBg').classList.add('open');
+      setTimeout(() => m.classList.add('opened'), 60);
+    }
+    function showItem(i, j) {
+      const it = SHOPS[i].items[j], d = document.getElementById('itemDetail');
+      d.innerHTML = `<h4 style="font-size:1.2rem;">${it[1]} <span style="color:#0f766e;">${it[2]}</span></h4><p style="color:var(--text-muted);margin:6px 0 10px;">${it[4]}</p><label style="font-weight:600;font-size:.9rem;">Options</label><select class="form-control" style="margin:6px 0 12px;">${it[3].map(o => `<option>${o}</option>`).join('')}</select><p style="color:var(--text-muted);font-size:.85rem;">Delivery pricing is quoted at checkout. The seller ships your order.</p>`;
+      d.className = 'item-detail open';
+      d.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    function closeShop() { document.getElementById('shopModalBg').classList.remove('open'); }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeShop(); });
   </script>
 </body>
 </html>
