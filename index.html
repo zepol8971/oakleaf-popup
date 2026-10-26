@@ -727,7 +727,6 @@
       <nav class="nav-links">
         <a href="#services">Services</a>
         <a href="#rentals">Rentals</a>
-        <a href="#shop">Shop</a>
         <a href="#marketplace">Virtual Mall</a>
         <a href="#vendors">Become a Vendor</a>
         <a href="#communities">Communities</a>
@@ -931,25 +930,14 @@
     </div>
   </section>
 
-  <!-- Shop: our own collectibles, sold and shipped through eBay -->
-  <section id="shop" class="container">
-    <div class="section-header">
-      <h2>Shop Our Collectibles</h2>
-      <p>Rare Monster High dolls, vintage books and '90s trading cards from our own collection. Checkout, payment and shipping are handled securely on eBay, and most items accept offers.</p>
-    </div>
-    <div class="shop-filters" id="shopFilters"></div>
-    <div class="shop-grid" id="shopGrid"></div>
-    <p class="shop-note">Prices shown are current asking prices; the eBay listing has the final price, shipping options and offer details. More rare Monster High dolls are being added soon.</p>
-  </section>
-
   <!-- Marketplace -->
   <section id="marketplace" class="container">
     <div class="section-header">
       <h2>Vendor Virtual Mall</h2>
-      <p>Come shop online with some of your favorite independently owned vendor businesses. Open a storefront door and browse the shelves. This is a preview; the sample shops below are placeholders.</p>
+      <p>Come shop online with some of your favorite independently owned vendor businesses. Open a storefront door and browse the shelves. The Florida Pop-Up Store is open now; more vendor storefronts are coming soon.</p>
     </div>
     <div class="mall">
-      <div class="mall-label">🏬 Sample storefronts: click one to step inside</div>
+      <div class="mall-label">🏬 Click a storefront to step inside</div>
       <div class="mall-row" id="mallRow"></div>
     </div>
   </section>
@@ -961,9 +949,10 @@
       <div class="shop-inner">
         <h3 id="shopTitle" style="font-size:1.6rem;"></h3>
         <p id="shopTag" style="color:var(--text-muted);margin-bottom:16px;"></p>
+        <div class="shop-filters" id="shopFilters"></div>
         <div class="rack" id="shopRack"></div>
         <div class="item-detail" id="itemDetail"></div>
-        <p style="color:var(--text-muted);font-size:.8rem;margin-top:16px;">Preview only. Sample shop, items and prices are placeholders; checkout is not live yet. Sellers ship their own orders.</p>
+        <p id="shopNote" style="color:var(--text-muted);font-size:.8rem;margin-top:16px;"></p>
       </div>
     </div>
   </div>
@@ -1070,7 +1059,6 @@
           <ul>
             <li><a href="#services">Services</a></li>
             <li><a href="#request">Request a Pop-Up</a></li>
-            <li><a href="#shop">Shop Collectibles</a></li>
             <li><a href="#marketplace">Virtual Mall</a></li>
             <li><a href="#vendors">Become a Vendor</a></li>
             <li><a href="#communities">Communities</a></li>
@@ -1163,7 +1151,6 @@
       ['306195410178','Monster High','Headless Headmistress Bloodgood &amp; Nightmare Horse Set (NRFB)','$140.00','F9kAAOSwmPRn3w8p','png'],
       ['307250112514','Trading Cards','1994 Fleer Ultra X-Men Complete Base Set + Inserts','$69.99','PEAAAeSwZmdq30bg','jpg'],
       ['307250117752','Trading Cards','1992-93 Marvel Masterpieces &amp; Impel X-Men Card Lot','$49.99','8tAAAeSwUNhq30di','jpg'],
-      ['307250120962','Trading Cards','Olivia Pin-Up Art 1992 Complete 90-Card Set (18+)','$34.99','WWoAAeSwfGxq30f3','jpg'],
       ['307250089071','Trading Cards','Ujena Swimwear Illustrated Cards 1993-94 (~170 cards)','$24.99','Dt0AAeSwnQhq30ML','jpg'],
       ['307250140060','Books','International Collectors Library, 8 Gilt Classics','$79.99','O-MAAeSwGY9q30s4','jpg'],
       ['307250146538','Books','Vintage Classics Hardcover Lot of 13 (Kipling 1935, Hardy)','$49.99','hPsAAeSwFthq30x-','jpg'],
@@ -1191,16 +1178,16 @@
       ['305908676708','Other Finds','SonicWall Firewall + 4 Wireless Access Points Bundle','$29.80','CxcAAOSwYR5nNlNJ','jpg']
     ];
     const SHOP_CATS = ['All', ...new Set(PRODUCTS.map(p => p[1]))];
-    function renderShop(cat) {
+    function renderStore(cat) {
       document.getElementById('shopFilters').innerHTML = SHOP_CATS.map(c =>
-        `<button class="${c === cat ? 'on' : ''}" onclick="renderShop('${c}')">${c}</button>`).join('');
-      document.getElementById('shopGrid').innerHTML = PRODUCTS.filter(p => cat === 'All' || p[1] === cat).map(p =>
+        `<button class="${c === cat ? 'on' : ''}" onclick="renderStore('${c}')">${c}</button>`).join('');
+      document.getElementById('shopRack').innerHTML = PRODUCTS.filter(p => cat === 'All' || p[1] === cat).map(p =>
         `<div class="shop-card"><img src="https://i.ebayimg.com/images/g/${p[4]}/s-l500.${p[5]}" alt="${p[2]}" loading="lazy"><div class="info"><span class="cat">${p[1]}</span><h3>${p[2]}</h3><span class="price">${p[3]}</span><a class="buy" href="https://www.ebay.com/itm/${p[0]}" target="_blank" rel="noopener">Buy on eBay →</a></div></div>`).join('');
     }
-    renderShop('All');
 
-    // ----- Pop-Up Mall preview (sample data only) -----
+    // ----- Pop-Up Mall: the Florida Pop-Up Store (live) plus sample storefronts -----
     const SHOPS = [
+      { name: 'Florida Pop-Up Store', tag: 'Collectibles, books &amp; more', c: '#0f766e', store: true },
       { name: 'Sample Candle Co.', tag: 'Hand-poured soy candles', c: '#f97316', items: [['🕯️','Lavender Jar','$14',['Small','Large'],'Hand-poured soy wax in a reusable jar.'],['🕯️','Citrus Tin','$9',['One size'],'Travel tin, bright citrus scent.'],['🎁','Gift Set','$32',['Set of 3'],'Three mini candles in a gift box.']] },
       { name: 'Sample Jewelry', tag: 'Handmade accessories', c: '#a855f7', items: [['📿','Beaded Bracelet','$18',['Blue','Coral','Green'],'Stretch bracelet, assorted colors.'],['💍','Silver Ring','$26',['6','7','8','9'],'Hand-finished sterling-plated ring.'],['✨','Earrings','$15',['Gold','Silver'],'Lightweight drop earrings.']] },
       { name: 'Sample Bakery', tag: 'Local baked goods', c: '#ec4899', items: [['🍪','Cookie Box','$16',['6-pack','12-pack'],'Fresh-baked assorted cookies.'],['🧁','Cupcakes','$22',['Half dozen','Dozen'],'Local pickup / delivery only.']] },
@@ -1214,8 +1201,18 @@
       document.getElementById('shopTitle').innerHTML = sh.name;
       document.getElementById('shopTag').innerHTML = sh.tag;
       document.getElementById('itemDetail').className = 'item-detail';
-      document.getElementById('shopRack').innerHTML = sh.items.map((it, j) =>
-        `<button class="item" onclick="showItem(${i},${j})"><div class="pic">${it[0]}</div><b>${it[1]}</b><span>${it[2]}</span></button>`).join('');
+      const rack = document.getElementById('shopRack'), note = document.getElementById('shopNote');
+      if (sh.store) {
+        rack.className = 'shop-grid';
+        note.textContent = 'Checkout, payment and shipping are handled securely on eBay, and most items accept offers. More rare Monster High dolls are being added soon.';
+        renderStore('All');
+      } else {
+        rack.className = 'rack';
+        document.getElementById('shopFilters').innerHTML = '';
+        note.textContent = 'Preview only. Sample shop, items and prices are placeholders; checkout is not live yet. Sellers ship their own orders.';
+        rack.innerHTML = sh.items.map((it, j) =>
+          `<button class="item" onclick="showItem(${i},${j})"><div class="pic">${it[0]}</div><b>${it[1]}</b><span>${it[2]}</span></button>`).join('');
+      }
       m.classList.remove('opened');
       document.getElementById('shopModalBg').classList.add('open');
       setTimeout(() => m.classList.add('opened'), 60);
