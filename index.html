@@ -630,6 +630,26 @@
     @media (max-width:640px){ .waitlist .row{grid-template-columns:1fr;} .waitlist{padding:24px 18px;} }
 
     /* Marketplace mall */
+    .shop-filters { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:28px; }
+    .shop-filters button { border:1px solid var(--card-border); background:var(--card-bg); color:var(--text-main); border-radius:999px; padding:8px 16px; font-weight:600; cursor:pointer; font:inherit; }
+    .shop-filters button.on { background:var(--primary); border-color:var(--primary); color:#fff; }
+    .shop-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:20px; }
+    .shop-card { background:var(--gradient-card); border:1px solid var(--card-border); border-radius:var(--radius-md); overflow:hidden; display:flex; flex-direction:column; transition:transform .25s,border-color .25s; }
+    .shop-card:hover { transform:translateY(-4px); border-color:rgba(15, 118, 110,.5); }
+    .shop-card img { width:100%; aspect-ratio:1/1; object-fit:cover; background:#fff; }
+    .shop-card .info { padding:14px 16px 16px; display:flex; flex-direction:column; gap:6px; flex:1; }
+    .shop-card .cat { color:var(--text-muted); font-size:.75rem; text-transform:uppercase; letter-spacing:.06em; font-weight:700; }
+    .shop-card h3 { font-size:1rem; line-height:1.3; }
+    .shop-card .price { color:var(--primary); font-weight:800; font-size:1.15rem; margin-top:auto; }
+    .shop-card .buy { display:block; text-align:center; background:var(--primary); color:#fff; border-radius:var(--radius-sm); padding:10px; font-weight:700; }
+    .shop-card .buy:hover { background:var(--primary-hover); }
+    @media (max-width:520px) {
+      .shop-grid { grid-template-columns:repeat(2,1fr); gap:12px; }
+      .shop-card .info { padding:10px 10px 12px; }
+      .shop-card h3 { font-size:.85rem; }
+      .shop-card .buy { padding:8px; font-size:.85rem; }
+    }
+    .shop-note { text-align:center; color:var(--text-muted); font-size:.85rem; margin:24px auto 100px; max-width:720px; }
     .mall { background:linear-gradient(180deg,rgba(28, 25, 23, .04),rgba(28, 25, 23, .01)); border:1px solid var(--card-border); border-radius:var(--radius-lg); padding:36px 28px 28px; margin-bottom:100px; }
     .mall-label { text-align:center; color:var(--text-muted); font-size:.85rem; text-transform:uppercase; letter-spacing:.08em; font-weight:700; margin-bottom:22px; }
     .mall-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:18px; }
@@ -707,6 +727,7 @@
       <nav class="nav-links">
         <a href="#services">Services</a>
         <a href="#rentals">Rentals</a>
+        <a href="#shop">Shop</a>
         <a href="#marketplace">Virtual Mall</a>
         <a href="#vendors">Become a Vendor</a>
         <a href="#communities">Communities</a>
@@ -910,6 +931,17 @@
     </div>
   </section>
 
+  <!-- Shop: our own collectibles, sold and shipped through eBay -->
+  <section id="shop" class="container">
+    <div class="section-header">
+      <h2>Shop Our Collectibles</h2>
+      <p>Rare Monster High dolls, vintage books and '90s trading cards from our own collection. Checkout, payment and shipping are handled securely on eBay, and most items accept offers.</p>
+    </div>
+    <div class="shop-filters" id="shopFilters"></div>
+    <div class="shop-grid" id="shopGrid"></div>
+    <p class="shop-note">Prices shown are current asking prices; the eBay listing has the final price, shipping options and offer details. More rare Monster High dolls are being added soon.</p>
+  </section>
+
   <!-- Marketplace -->
   <section id="marketplace" class="container">
     <div class="section-header">
@@ -1038,6 +1070,7 @@
           <ul>
             <li><a href="#services">Services</a></li>
             <li><a href="#request">Request a Pop-Up</a></li>
+            <li><a href="#shop">Shop Collectibles</a></li>
             <li><a href="#marketplace">Virtual Mall</a></li>
             <li><a href="#vendors">Become a Vendor</a></li>
             <li><a href="#communities">Communities</a></li>
@@ -1121,6 +1154,50 @@
       else w.style.display = 'none';
     }
     document.addEventListener('DOMContentLoaded', () => { const el = document.getElementById('eventDate'); if (el) el.min = new Date().toISOString().slice(0, 10); });
+
+    // ----- Shop: live eBay listings [eBay item id, category, name, price, eBay photo key, photo ext] -----
+    const PRODUCTS = [
+      ['307250053705','Monster High','Rare Frights Camera Action Clawdia Wolf (2013, NRFB)','$224.99','tF8AAeSwXX1q3z8q','jpg'],
+      ['306195401158','Monster High','Exclusive Werecat Sisters Meowlody &amp; Purrsephone (2011, NRFB)','$279.95','QDwAAOSwLQ9n3w2l','png'],
+      ['306195373186','Monster High','Super Rare Valentine\'s Light-Up Mailbox with 32 Cards','$145.95','jzQAAOSwfSVn3vPB','jpg'],
+      ['306195410178','Monster High','Headless Headmistress Bloodgood &amp; Nightmare Horse Set (NRFB)','$140.00','F9kAAOSwmPRn3w8p','png'],
+      ['307250112514','Trading Cards','1994 Fleer Ultra X-Men Complete Base Set + Inserts','$69.99','PEAAAeSwZmdq30bg','jpg'],
+      ['307250117752','Trading Cards','1992-93 Marvel Masterpieces &amp; Impel X-Men Card Lot','$49.99','8tAAAeSwUNhq30di','jpg'],
+      ['307250120962','Trading Cards','Olivia Pin-Up Art 1992 Complete 90-Card Set (18+)','$34.99','WWoAAeSwfGxq30f3','jpg'],
+      ['307250089071','Trading Cards','Ujena Swimwear Illustrated Cards 1993-94 (~170 cards)','$24.99','Dt0AAeSwnQhq30ML','jpg'],
+      ['307250140060','Books','International Collectors Library, 8 Gilt Classics','$79.99','O-MAAeSwGY9q30s4','jpg'],
+      ['307250146538','Books','Vintage Classics Hardcover Lot of 13 (Kipling 1935, Hardy)','$49.99','hPsAAeSwFthq30x-','jpg'],
+      ['307250109074','Books','Harvard Classics Deluxe Registered Edition, 6 Volumes','$49.99','wb8AAeSwVxNq30Zn','jpg'],
+      ['307250105414','Books','Poetry &amp; Nature Lot of 13 (Yeats, Frost, Thoreau)','$39.99','zOoAAeSwvjpq30WV','jpg'],
+      ['307250131025','Books','Doctor Faustus, Thomas Mann (Knopf 1948)','$39.99','Wg4AAeSwot9q30me','jpg'],
+      ['307250195643','Books','The Iliad of Homer, Lattimore (Univ. of Chicago Press)','$34.99','sPAAAeSwsKZq31O2','jpg'],
+      ['307250202408','Books','Orwell\'s 1984, Illustrated Gilt Collector\'s Edition','$34.99','rK8AAeSweYFq31Qn','jpg'],
+      ['307250081667','Books','Leaves of Grass, Rockwell Kent Illustrated','$29.99','J58AAeSwwvJq30Ia','jpg'],
+      ['307250125168','Books','The Road to Eleusis, 30th Anniversary Edition','$29.99','PLUAAeSwi1tq30iM','jpg'],
+      ['307250142393','Books','Classics Club Philosophy Trio (Aristotle, Lucretius, Montaigne)','$29.99','II4AAeSwP1pq30us','jpg'],
+      ['307250092379','Books','Oxford Book of Light Verse, W.H. Auden (1939)','$24.99','l8cAAeSwVxNq30Ol','jpg'],
+      ['307250134351','Books','Christian Book Lot of 5 (Spurgeon, Piper, Bunyan)','$24.99','PIwAAeSwP7Nq30oP','jpg'],
+      ['307250136468','Books','Heron Books Collector\'s Editions, Lot of 4','$24.99','maUAAeSwkYpq30rA','jpg'],
+      ['307250128251','Books','Twelfth Night, W. Heath Robinson Illustrated','$19.99','GlYAAeSw6glq30kz','jpg'],
+      ['306461377957','Books','The Treasury of American Poetry','$14.97','WuEAAeSwRQ5op72Z','jpg'],
+      ['306033019445','Books','Diary of a Wimpy Kid: Hard Luck (Hardcover)','$11.00','xDAAAOSwtjZnga~v','jpg'],
+      ['306033021131','Books','Diary of a Wimpy Kid #10: Old School (Hardcover)','$11.00','FnIAAOSwLbVngbB7','jpg'],
+      ['306033025631','Books','Diary of a Wimpy Kid #7: The Third Wheel (Hardcover)','$11.00','lXoAAOSwGApngbG-','jpg'],
+      ['306033045180','Books','Diary of a Wimpy Kid #3: The Last Straw (Hardcover)','$10.00','z4wAAOSw~45ngbOL','jpg'],
+      ['306033038901','Books','Diary of a Wimpy Kid #12: The Getaway (Hardcover)','$10.00','VcIAAOSwyJ5ngbNP','jpg'],
+      ['306033022913','Books','Diary of a Wimpy Kid #6: Cabin Fever (Hardcover)','$10.00','~kEAAOSwMUNngbDa','jpg'],
+      ['306033057873','Books','Diary of a Wimpy Kid #1 (Hardcover)','$8.00','IzIAAOSw~mBngbS9','jpg'],
+      ['306632644321','Other Finds','Tapology Wine Aerator, Dispenser &amp; Chiller (Open Box)','$40.00','K-kAAeSwieNpKfDE','jpg'],
+      ['305908676708','Other Finds','SonicWall Firewall + 4 Wireless Access Points Bundle','$29.80','CxcAAOSwYR5nNlNJ','jpg']
+    ];
+    const SHOP_CATS = ['All', ...new Set(PRODUCTS.map(p => p[1]))];
+    function renderShop(cat) {
+      document.getElementById('shopFilters').innerHTML = SHOP_CATS.map(c =>
+        `<button class="${c === cat ? 'on' : ''}" onclick="renderShop('${c}')">${c}</button>`).join('');
+      document.getElementById('shopGrid').innerHTML = PRODUCTS.filter(p => cat === 'All' || p[1] === cat).map(p =>
+        `<div class="shop-card"><img src="https://i.ebayimg.com/images/g/${p[4]}/s-l500.${p[5]}" alt="${p[2]}" loading="lazy"><div class="info"><span class="cat">${p[1]}</span><h3>${p[2]}</h3><span class="price">${p[3]}</span><a class="buy" href="https://www.ebay.com/itm/${p[0]}" target="_blank" rel="noopener">Buy on eBay →</a></div></div>`).join('');
+    }
+    renderShop('All');
 
     // ----- Pop-Up Mall preview (sample data only) -----
     const SHOPS = [
